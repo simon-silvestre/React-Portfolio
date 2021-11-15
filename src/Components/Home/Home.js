@@ -1,14 +1,14 @@
 import React from 'react'
 import NavBar from './NavBar/NavBar'
 import Logo from './Logo/Logo'
-import Souris from './Souris/Souris'
+import Scroll from './Scroll/Scroll'
 
 function Home() {
     return (
-        <div className="Home">
+        <div className="Home" id="Home">
             <Logo />
             <NavBar />
-            <Souris />
+            <Scroll />
         </div>
     )
 }

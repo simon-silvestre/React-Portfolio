@@ -8,14 +8,20 @@
     a:nth-child(1) {
         margin-right: 15px;
     }
+    svg, path {
+        transition: all .2s ease-in-out;
+    }
     svg {
         font-size: 21px;
-        color: $blue;
-        transition: all .2s ease-in-out;
 
+        path {
+            color: $blue;
+        }
         &:hover {
-            color: #000;
             font-size: 25px;
+        }
+        &:hover path {
+            color: #000;
         }
     }
 }

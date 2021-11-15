@@ -1,0 +1,45 @@
+.Footer, .Footer .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Footer {
+    width: 100%;
+    padding: 18px 0;
+
+    .logo {
+        height: 100px;
+        margin: 0 50px;
+
+        img {
+            height: 100%;
+            filter: grayscale(1);
+            opacity: .25;
+        }
+        p {
+            position: absolute;
+            font-weight: 700;
+            opacity: .5;
+        }
+    }
+    a {
+        opacity: .5;
+        margin: 0 25px;
+        transition: opacity .3s cubic-bezier(.645,.045,.355,1);
+
+        &:hover {
+            opacity: .75;
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .Footer {
+        a {
+            display: none;
+        }
+        .logo {
+            height: 90px;
+        }
+    }
+}

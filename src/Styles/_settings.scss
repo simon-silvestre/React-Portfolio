@@ -1,12 +1,14 @@
 $poppins: Poppins,sans-serif;
 $gilroy: Gilroy ExtraBold,sans-serif;
 $blue: #047be3;
+$text-1: #252525;
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
+    color: $text-1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }

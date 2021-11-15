@@ -1,0 +1,43 @@
+.Workflow {
+    background: $blue;
+    padding: 50px;
+
+    h2 {
+        width: fit-content;
+        margin: 0 auto;
+    }
+    .languageContainer {
+        max-width: 700px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        svg {
+            margin: 50px;
+            font-size: 70px;
+
+            path {
+                color: #fff;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:800px) {
+    .Workflow {
+        h2 {
+            margin-bottom: 25px;
+        }
+        .languageContainer {
+            max-width: 400px;
+
+            svg {
+                margin: 25px;
+                font-size: 50px;
+                width: 50px;
+            }
+        }
+    }
+}

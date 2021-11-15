@@ -1,0 +1,42 @@
+$poppins: Poppins,sans-serif;
+$gilroy: Gilroy ExtraBold,sans-serif;
+$blue: #047be3;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+p
+{
+    font-family: $poppins;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+a, button, label
+{
+    font-family: $poppins;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .17em;
+    cursor: pointer;
+}
+
+h1
+{
+    font-family: Gilroy ExtraBold,sans-serif;
+    font-size: 65px;
+    font-weight: bold;
+    line-height: 0.9;
+}

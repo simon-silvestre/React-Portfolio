@@ -1,0 +1,18 @@
+.Logo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 203px;
+    background: center / contain no-repeat ;
+
+    h1, p {
+        text-transform: capitalize;
+        color: #fff;
+    }
+    p {
+        opacity: .5;
+        margin-top: 5px;
+    }
+}

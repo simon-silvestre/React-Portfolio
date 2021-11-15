@@ -1,0 +1,13 @@
+.NavBar {
+    margin: 15px 0 0 0;
+    text-transform: uppercase;
+
+    a {
+        color: #fff;
+        margin: 0 6px;
+    }
+    span {
+        color: $blue;
+        font-weight: 900;
+    }
+}

@@ -35,10 +35,17 @@ a, button, label
     cursor: pointer;
 }
 
-h1
+h1, h2, h3, h4
 {
-    font-family: Gilroy ExtraBold,sans-serif;
-    font-size: 65px;
+    font-family: $gilroy;
     font-weight: bold;
     line-height: 0.9;
+}
+
+h1 {
+    font-size: 65px;
+}
+h2 {
+    font-size: 50px;
+    text-transform: capitalize;
 }

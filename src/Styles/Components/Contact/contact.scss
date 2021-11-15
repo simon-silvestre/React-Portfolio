@@ -1,0 +1,49 @@
+.Contact {
+    width: 100%;
+    background: #e8e8e8;
+    padding: 75px 25px 115px 25px;
+    
+    h2 {
+        width: fit-content;
+        margin: 0 auto 35px auto;
+    }
+
+    form {
+        max-width: 512px;
+        margin: 0 auto;
+
+        .input {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 30px;
+
+            input, textarea {
+                letter-spacing: .10em;
+                font-family: $poppins;
+                background: #d2d2d2;
+                margin-top: 8px;
+            }
+        }
+        input, textarea, button {
+            border: 0;
+            outline: 0;
+            padding: 18px 18px;
+            border-radius: 3px;
+        }
+        button 
+        {    
+            width: 100%;
+            background: $blue;
+            color: #fff;
+            transition: background .35s ease-in-out,color .35s ease-in-out;
+        }
+    }
+    .message {
+        margin-top: 20px;
+
+        p {
+            font-size: 14px;
+            text-align: center;
+        }
+    }
+}

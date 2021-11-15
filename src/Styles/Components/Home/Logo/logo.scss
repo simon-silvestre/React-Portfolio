@@ -14,5 +14,19 @@
     p {
         opacity: .5;
         margin-top: 5px;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .Logo {
+        height: 40vw;
+
+        h1 {
+            font-size: 11vw;
+        }
+        p {
+            font-size: 100%;
+        }
     }
 }

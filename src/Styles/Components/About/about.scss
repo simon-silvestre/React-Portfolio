@@ -1,0 +1,96 @@
+.About {
+    background: $text-1;
+    padding: 100px 50px;
+
+    h2 {
+        color: #fff;
+        text-transform: none;
+        margin-bottom: 50px;
+    }
+    .informations {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .profil {
+            background: rgba(0,0,0,.15);
+            padding: 25px;
+            margin-right: 90px;
+            border-radius: 6px;
+
+            .pdp {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                border: 4px solid $blue;
+                box-shadow: 0 0 0 6px #047be334;
+                overflow: hidden;
+                margin: 0 auto 18px auto;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            p {
+                margin: 10px 20px 2px 20px;
+            }
+        }
+
+        p {
+            font-size: 14px;
+            color: hsla(0,0%,100%,.7);
+    
+            span {
+                font-weight: 600;
+                letter-spacing: .17em;
+                text-transform: uppercase;
+                color: #fff;
+                font-size: 12px;
+            }
+        }
+        .presentation {
+            width: 60%;
+
+            p {
+                text-indent: 1.5em;
+                font-size: 17.5px;
+                line-height: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .About {
+        .informations {
+            flex-direction: column;
+
+            .profil {
+                text-align: center;
+                margin: 0 0 50px 0;
+
+                .pdp {
+                    margin: 20px auto 30px auto;
+                }
+
+                p {
+                    margin: 10px 20px 10px 20px;
+                }
+            }
+
+            .presentation {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 415px) {
+    .About {
+        padding: 100px 20px;
+        text-align: center;
+    }
+}

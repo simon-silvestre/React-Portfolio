@@ -9,12 +9,12 @@ function Workflow() {
             <div className="languageContainer">
                 <FontAwesomeIcon icon={faReact}></FontAwesomeIcon>
                 <FontAwesomeIcon icon={faJsSquare}></FontAwesomeIcon>
-                <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
                 <FontAwesomeIcon icon={faCss3}></FontAwesomeIcon>
+                <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
                 <FontAwesomeIcon icon={faVuejs}></FontAwesomeIcon>
                 <FontAwesomeIcon icon={faSass}></FontAwesomeIcon>
-                <FontAwesomeIcon icon={faApple}></FontAwesomeIcon>
                 <FontAwesomeIcon icon={faHtml5}></FontAwesomeIcon>
+                <FontAwesomeIcon icon={faApple}></FontAwesomeIcon>
             </div>
         </div>
     )

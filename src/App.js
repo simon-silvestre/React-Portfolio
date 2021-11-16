@@ -5,12 +5,14 @@ import About from './Components/About/About';
 import Workflow from './Components/Workflow/Workflow';
 import Contact from './Components/Contact/Contact';
 import Footer from './Components/Footer';
+import Introduction from './Components/Introduction/Introduction';
 
 function App() {
   return (
     <div className="App">
       <SocialMedia />
       <Home />
+      <Introduction />
       <About />
       <Workflow />
       <Contact />

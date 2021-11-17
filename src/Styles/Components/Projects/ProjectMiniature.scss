@@ -16,11 +16,20 @@
     position: absolute;
 }
 
+.ProjectMiniature:nth-child(2n+1)
+{
+    background-color: $blue;
+}
+
+.ProjectMiniature:nth-child(2n)
+{
+    background-color: #1d66a7;
+}
+
 .ProjectMiniature {
     min-width: 250px;
     min-height: 275px;
     margin: 16px 12px 0;
-    background: $blue;
     flex-direction: column;
     cursor: pointer;
     transition: all .375s cubic-bezier(.645,.045,.355,1);

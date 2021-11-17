@@ -5,39 +5,75 @@ function Projects() {
 
     const [projects, setProjects] = useState([
         {
-            name: 'github job',
-            miniature: 'Images/projects/gitjob_miniature.webp',
+            name: 'chifoumi',
+            miniature: 'Images/projects/chifoumi_miniature.png',
+            img: 'Images/projects/chifoumi.png',
+            type: 'vue'
+        },
+        {
+            name: 'bookmark',
+            miniature: 'Images/projects/bookmark_miniature.webp',
+            img: 'Images/projects/bookmark.webp',
+            type: 'vue'
+        },
+        {
+            name: 'pomodoro',
+            miniature: 'Images/projects/miniature_pomodoro.webp',
+            img: 'Images/projects/pomodoro.webp',
+            type: 'vue'
+        },
+        {
+            name: 'todo list',
+            miniature: 'Images/projects/todo_miniature.webp',
+            img: 'Images/projects/todo.webp',
+            type: 'vue'
+        },
+        {
+            name: 'movie app',
+            miniature: 'Images/projects/movieApp_miniature.webp',
+            img: 'Images/projects/movieApp.webp',
+            type: 'vue'
+        },
+        {
+            name: 'price component',
+            miniature: 'Images/projects/priceComponent_miniature.webp',
+            img: 'Images/projects/priceComponent.webp',
+            type: 'vue'
+        },
+        {
+            name: 'weather app',
+            miniature: 'Images/projects/reactWeatherApp.webp',
+            img: 'Images/projects/reactWeatherApp.webp',
+            type: 'react'
+        },
+        {
+            name: 'todo list',
+            miniature: 'Images/projects/reactTodo.webp',
+            img: 'Images/projects/reactTodo.webp',
+            type: 'react'
+        },
+        {
+            name: 'birthday reminder',
+            miniature: 'Images/projects/birthdayReminder.webp',
+            img: 'Images/projects/birthdayReminder.webp',
+            type: 'react'
+        },
+        {
+            name: 'worker review',
+            miniature: 'Images/projects/workerReview.webp',
+            img: 'Images/projects/workerReview.webp',
+            type: 'react'
+        },
+        {
+            name: 'star wars',
+            miniature: 'Images/projects/starWars_miniature.webp',
             img: 'Images/projects/gitjob.webp',
             type: 'all'
         },
         {
-            name: 'github job',
-            miniature: 'Images/projects/gitjob_miniature.webp',
-            img: 'Images/projects/gitjob.webp',
-            type: 'all'
-        },
-        {
-            name: 'github job',
-            miniature: 'Images/projects/gitjob_miniature.webp',
-            img: 'Images/projects/gitjob.webp',
-            type: 'all'
-        },
-        {
-            name: 'github job',
-            miniature: 'Images/projects/gitjob_miniature.webp',
-            img: 'Images/projects/gitjob.webp',
-            type: 'all'
-        },
-        {
-            name: 'github job',
-            miniature: 'Images/projects/gitjob_miniature.webp',
-            img: 'Images/projects/gitjob.webp',
-            type: 'all'
-        },
-        {
-            name: 'github job',
-            miniature: 'Images/projects/gitjob_miniature.webp',
-            img: 'Images/projects/gitjob.webp',
+            name: 'progress bar',
+            miniature: 'Images/projects/progressBar.webp',
+            img: 'Images/projects/progressBar.webp',
             type: 'all'
         },
     ])
@@ -47,11 +83,12 @@ function Projects() {
         setActive(active)
     }
 
-    let projectMiniature = projects.map((project, index) => {
+    let projectMiniature = projects.filter(project => project.type === active || active === 'all').map((project, index) => {
         return (
             <ProjectMiniature
               name={project.name}
               img={project.miniature}
+              type={project.type}
               key={index}
             >
             </ProjectMiniature>

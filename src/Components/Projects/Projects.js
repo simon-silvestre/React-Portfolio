@@ -77,7 +77,7 @@ function Projects() {
             type: 'all'
         },
     ])
-    let [active, setActive] = useState('react')
+    let [active, setActive] = useState('vue')
 
     function handlebutton(active) {
         setActive(active)
@@ -105,8 +105,8 @@ function Projects() {
             <div className="navBar">
                 <h2>mes projets</h2>
                 <div className="nav">
+                <p className={active === 'vue' ? 'active' : ''} onClick={() => handlebutton('vue')}>vuejs</p>
                     <p className={active === 'react' ? 'active' : ''} onClick={() => handlebutton('react')}>reactjs</p>
-                    <p className={active === 'vue' ? 'active' : ''} onClick={() => handlebutton('vue')}>vuejs</p>
                     <p className={active === 'all' ? 'active' : ''} onClick={() =>handlebutton('all')}>all</p>
                 </div>
             </div>

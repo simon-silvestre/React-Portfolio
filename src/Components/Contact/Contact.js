@@ -34,7 +34,7 @@ function Contact() {
       }
 
     return (
-        <div className="Contact">
+        <div className="Contact" id='Contact'>
             <h2>contact</h2>
             <form ref={form} onSubmit={sendEmail}>
                 <div className="input">

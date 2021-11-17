@@ -51,6 +51,9 @@
 @media screen and (max-width: 415px) {
     .Contact {
         form {
+            label, input, textarea, button {
+                font-size: 11px;
+            }
             input, textarea, button {
                 padding: 15px 18px;
             }

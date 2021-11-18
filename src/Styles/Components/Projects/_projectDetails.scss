@@ -1,0 +1,105 @@
+.ProjectDetails {
+    background-color: #e8e8e8;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    z-index: 10;
+    padding: 50px;
+
+    svg {
+        height: auto;
+        top: 50px;
+        right: 12%;
+        font-size: 20px;
+        fill: $text-1;
+        cursor: pointer;
+        opacity: .75;
+    }
+
+    h2 {
+        margin-top: 15px;
+        color: $blue;
+    }
+    
+    .details {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 50px 0;
+
+        div, a {
+            margin: 0 30px;
+            line-height: 22px;
+        }
+
+        p {
+            text-transform: capitalize;
+        }
+        .date p:nth-child(1), .langage p:nth-child(1) {
+            font-weight: 600;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: .15em;
+        }
+
+        a {
+            border: 3px solid #047be3;
+            padding: 12px 14px;
+            color: #047be3;
+            transition: .275s cubic-bezier(.645,.045,.355,1);
+            font-weight: 700!important;
+
+            &:hover {
+                background: #047be3;
+                color: #fff;
+            }
+        }
+    }
+    
+    .message, .image {
+        max-width: 1270px;
+    }
+    .message {
+        width: fit-content;
+        line-height: 24px;
+        margin: 0 auto;
+    }
+
+    .image {
+        margin: 60px auto;
+
+        img {
+            width: 100%;
+            border-radius: 8px;
+            background: #fff;
+            padding: 24px;
+            box-shadow: 0 3px 7px 0 rgba(37,37,37,.1);
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .ProjectDetails {
+
+        svg {
+            top: 25px;
+        }
+
+        .details {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+
+            .date, .langage {
+                width: 50%;
+                margin: 0;
+            }
+
+            a {
+                margin: 30px 0 0 0;
+            }
+        }
+    }
+}

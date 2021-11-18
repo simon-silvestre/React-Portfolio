@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Project({name, img, type}) {
+function Project({name, img, display}) {
     return (
         <div className="ProjectMiniature">
             <div className="contenu">
@@ -8,7 +8,7 @@ function Project({name, img, type}) {
                 <p>{name}</p>
             </div>
             <div className="overlay">
-                <p>Voir plus</p>
+                <p onClick={display}>Voir plus</p>
             </div>
         </div>
     )

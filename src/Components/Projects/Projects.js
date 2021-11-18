@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import ProjectDetails from './ProjectDetails'
 import ProjectMiniature from './ProjectMiniature'
 
 function Projects() {
@@ -8,79 +9,129 @@ function Projects() {
             name: 'chifoumi',
             miniature: 'Images/projects/chifoumi_miniature.png',
             img: 'Images/projects/chifoumi.png',
+            link: 'http://chifoumi.simon-projets.com',
+            date: '20 fév, 2021',
+            message: 'Projet de réalisation d’un jeu de pierre-feuille-ciseaux avec un choix aléatoire de la part de l’adversaire, une fenêtre pour les règles et un score card. 3 résultats possibles: gagnée, perdre ou obtenir une égalité.',
             type: 'vue'
         },
         {
             name: 'bookmark',
             miniature: 'Images/projects/bookmark_miniature.webp',
             img: 'Images/projects/bookmark.webp',
+            link: 'http://bookmark.simon-projets.com',
+            date: '16 déc, 2020',
+            message: 'Petit projet d’intégration de maquette réalisé avec Vuejs et Sass pour me familiariser avec celui-ci. Première fois que j’utilisais Scss sur un projet.',
             type: 'vue'
         },
         {
             name: 'pomodoro',
             miniature: 'Images/projects/miniature_pomodoro.webp',
             img: 'Images/projects/pomodoro.webp',
+            link: 'https://pomodoro.simon-projets.com',
+            date: '1 fev, 2021',
+            message: 'Pomodoro site web de chronomètre avec décompte variable, choix de la couleur et de la police du site. C’est un défi d’intégration lancer par FrontendMentorChallenge.io.',
             type: 'vue'
         },
         {
             name: 'todo list',
             miniature: 'Images/projects/todo_miniature.webp',
             img: 'Images/projects/todo.webp',
+            link: 'http://todo.simon-projets.com',
+            date: '28 nov, 2020',
+            message: 'Ce projet avait pour but de crée une to do list avec VueJs et firebase, le but final étant de crée un système d’authentification pour crée ses propres listes.',
             type: 'vue'
         },
         {
             name: 'movie app',
             miniature: 'Images/projects/movieApp_miniature.webp',
             img: 'Images/projects/movieApp.webp',
+            link: 'http://movies.simon-projets.com',
+            date: '4 déc, 2020',
+            message: 'Projet de catalogue de films avec système de recherche à l’aide d’une api.',
             type: 'vue'
         },
         {
             name: 'price component',
             miniature: 'Images/projects/priceComponent_miniature.webp',
             img: 'Images/projects/priceComponent.webp',
+            link: 'http://price.simon-projets.com',
+            date: '17 fév, 2021',
+            message: 'Intégration d’une maquette d’un composant qui contient un slider pour sélectionner le prix et un switch à la manière de ceux d’Apple.',
             type: 'vue'
         },
         {
             name: 'weather app',
             miniature: 'Images/projects/reactWeatherApp.webp',
             img: 'Images/projects/reactWeatherApp.webp',
+            link: 'http://weather.simon-projets.com',
+            date: '7 nov, 2020',
+            message: 'Ce projet avait pour but de créer une application de météo qui affichait la température actuelle et les prévisions des 5 jours à venir. J’ai crée ce sur pour m’entrainer a utiliser vue.js.',
             type: 'react'
         },
         {
             name: 'todo list',
             miniature: 'Images/projects/reactTodo.webp',
             img: 'Images/projects/reactTodo.webp',
+            link: 'http://react-todo.simon-projets.com',
+            date: '1 nov, 2021',
+            message: 'Projet effectué afin de m’entrainer sur le framework React et Firebase, il consiste en une todo-list classique avec fonctionnalités d’ajout et de suppression de tâches.',
             type: 'react'
         },
         {
             name: 'birthday reminder',
             miniature: 'Images/projects/birthdayReminder.webp',
             img: 'Images/projects/birthdayReminder.webp',
+            link: 'http://birthday-reminder.simon-projets.com',
+            date: '5 nov, 2021',
+            message: 'Projet effectué lors de mon apprentissage de React. C’est un site de Rappel d\'anniversaire avec possibilité de supprimer les anniversaires au fur et à mesure ou tous d\'un coup.',
             type: 'react'
         },
         {
             name: 'worker review',
             miniature: 'Images/projects/workerReview.webp',
             img: 'Images/projects/workerReview.webp',
+            link: 'http://react-reviews.simon-projets.com',
+            date: '8 nov, 2021',
+            message: 'Reviews du personnel d\'une entreprise avec affichage des informations dynamique.',
             type: 'react'
         },
         {
             name: 'star wars',
             miniature: 'Images/projects/starWars_miniature.webp',
-            img: 'Images/projects/gitjob.webp',
-            type: 'all'
+            img: 'Images/projects/starWars.webp',
+            link: 'http://gsap.simon-projets.com',
+            date: '12 fév, 2021',
+            message: 'Petit projet pour commencer à utiliser Three js, je regarde en ce moment la série The Mandalorian donc je me suis dit pourquoi ne pas essayer avec cet univers. J’ai créé la scène avec Three js, importé le modèle 3D à l’aide de gltfLoader, créé des étoiles et leur ai appliqué une texture, puis j’ai ajouté deux titres avec les polices adéquates. J’ai aussi utilisé gsap pour faire les animations.',
+            type: 'javascript'
         },
         {
             name: 'progress bar',
             miniature: 'Images/projects/progressBar.webp',
             img: 'Images/projects/progressBar.webp',
-            type: 'all'
+            link: 'http://progress-bar.simon-projets.com',
+            date: '3 déc, 2020',
+            message: 'Composant de barre de progression animée',
+            type: 'javascript'
         },
     ])
-    let [active, setActive] = useState('vue')
+    const [active, setActive] = useState('vue')
+    const [showProject, setShowProject] = useState(false)
+    const [projectIndex, setProjectIndex] = useState()
+    
 
     function handlebutton(active) {
         setActive(active)
+    }
+
+    function displayProject(index){
+        setProjectIndex(active === 'react' ? index + projects.filter(project => project.type === 'vue').length : index)
+        setShowProject(true)
+        document.body.style.overflow = "hidden";
+    }
+
+    function closeProject() {
+        setShowProject(false)
+        document.body.style.overflow = "unset";
     }
 
     let projectMiniature = projects.filter(project => project.type === active || active === 'all').map((project, index) => {
@@ -90,6 +141,7 @@ function Projects() {
               img={project.miniature}
               type={project.type}
               key={index}
+              display={() => displayProject(index)}
             >
             </ProjectMiniature>
         )
@@ -113,6 +165,19 @@ function Projects() {
             <div className="projectsContainer">
                 {projectMiniature}
             </div>
+            {(showProject) ? (
+                <ProjectDetails
+                name={projects[projectIndex].name}
+                img={projects[projectIndex].img}
+                date={projects[projectIndex].date}
+                type={projects[projectIndex].type}
+                message={projects[projectIndex].message}
+                link={projects[projectIndex].link}
+                close={() => closeProject()}
+                key={projectIndex}
+              >
+              </ProjectDetails>
+            ) : ('')}
         </div>
     )
 }

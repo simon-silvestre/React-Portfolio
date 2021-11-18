@@ -18,6 +18,10 @@ html
     scroll-behavior: smooth;
 }
 
+body.project {
+    overflow: hidden;
+}
+
 p
 {
     font-family: $poppins;

@@ -5,7 +5,7 @@ import Scroll from './Scroll/Scroll'
 
 function Home() {
     return (
-        <div className="Home" id="Home">
+        <div className="Home">
             <Logo />
             <NavBar />
             <Scroll />
